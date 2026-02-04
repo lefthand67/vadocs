@@ -43,7 +43,11 @@ uv run pytest tests/ -v
 ```
 
 ```bash
+<<<<<<<< HEAD:docs/rnd/move-to-repo.md
 uv run pytest tests/ --cov=. --cov-report=term-missing -q
+========
+env -u VIRTUAL_ENV uv run pytest tests/ --cov=. --cov-report=term-missing -q
+>>>>>>>> dc28782 (feat: Complete proof of concept for vadocs v0.1.0):docs/move-to-repo.md
 ```
 
 ## Step 4: Create initial commit
@@ -75,6 +79,7 @@ git remote add origin git@github.com:YOUR_USERNAME/vadocs.git
 git push -u origin main
 ```
 
+<<<<<<<< HEAD:docs/rnd/move-to-repo.md
 
 ```bash
 $ sudo dnf install gh
@@ -93,6 +98,35 @@ The minimum required scopes are 'repo', 'read:org', 'admin:public_key'.
 ✓ SSH key already existed on your GitHub account: /home/username/.ssh/id_github.pub
 ✓ Logged in as username
 ```
+========
+<!-- #region -->
+```bash
+$ sudo dnf install gh
+
+gh auth login
+? Where do you use GitHub? GitHub.com
+? What is your preferred protocol for Git operations on this host? SSH
+? Upload your SSH public key to your GitHub account? /home/username/.ssh/id_github.pub
+? Title for your SSH key: gh_cli
+? How would you like to authenticate GitHub CLI? Paste an authentication token
+Tip: you can generate a Personal Access Token here https://github.com/settings/tokens
+The minimum required scopes are 'repo', 'read:org', 'admin:public_key'.
+? Paste your authentication token: ****************************************
+- gh config set -h github.com git_protocol ssh
+✓ Configured git protocol
+✓ SSH key already existed on your GitHub account: /home/username/.ssh/id_github.pub
+✓ Logged in as username
+```
+<!-- #endregion -->
+
+## Step 6: Test installation in target project
+
+
+Conduct [PoC validation](/docs/poc.ipynb).
+
+Passed.
+
+>>>>>>>> dc28782 (feat: Complete proof of concept for vadocs v0.1.0):docs/move-to-repo.md
 
 
 ## Step 6: Test installation in target project
