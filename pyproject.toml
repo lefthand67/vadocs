@@ -17,6 +17,7 @@ classifiers = [
     "Programming Language :: Python :: 3.14",
 ]
 dependencies = [
+    "jupytext>=1.19.1",
     "pytest>=9.0.2",
     "pytest-cov>=7.0.0",
     "pyyaml>=6.0",
@@ -38,3 +39,6 @@ packages = ["src/vadocs"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.jupytext]
+formats = "ipynb,md:myst"
