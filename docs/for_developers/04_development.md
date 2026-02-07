@@ -32,10 +32,10 @@ uv run pytest tests/ --cov=. --cov-report=term-missing -q
 ## Dogfooding (Self-Validation)
 
 
-`vadocs` is used to maintain its own documentation. This "dogfooding" approach ensures the tool remains functional and identifies missing features during development.
+`vadocs` is used to maintain its own documentation. This "dogfooding" approach ensures the tool remains functional and identifies missing features during development. For more details on this decision, see {term}`ADR-26030`.
 
-- **General Docs:** Use `FrontmatterValidator` to ensure all developer guides have consistent metadata.
-- **ADRs:** Architectural decisions for `vadocs` itself are stored in `docs/adrs/` and validated using `AdrValidator`.
+- **Validation:** The tool's validation engine is applied to all documentation in the `docs/` directory to ensure consistency and adherence to standards.
+- **Fixing:** Automated fixers are used to maintain the documentation suite, ensuring that the project's own docs serve as a canonical example of the tool's capabilities.
 - **Editable Install:** For local development and self-validation, install the package in editable mode:
   ```bash
   uv pip install -e .
