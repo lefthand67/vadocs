@@ -1,6 +1,9 @@
 # Development Workflow
 
+
 ## Environment & Packaging
+
+
 The project uses `uv` for dependency management and `hatchling` as the build backend, configured in `pyproject.toml`.
 
 - **Python Requirement:** `>=3.13`.
@@ -12,7 +15,10 @@ To set up the development environment:
 uv sync
 ```
 
+
 ## Testing
+
+
 Tests are located in `tests/` and use `pytest`.
 - **Fixtures:** Common test data (sample Markdown with/without frontmatter) is defined in `tests/conftest.py`.
 - **Core Tests:** `tests/core/` contains tests for models and parsing logic.
@@ -22,7 +28,10 @@ To run the test suite with coverage reporting:
 uv run pytest tests/ --cov=. --cov-report=term-missing -q
 ```
 
+
 ## Dogfooding (Self-Validation)
+
+
 `vadocs` is used to maintain its own documentation. This "dogfooding" approach ensures the tool remains functional and identifies missing features during development.
 
 - **General Docs:** Use `FrontmatterValidator` to ensure all developer guides have consistent metadata.
@@ -32,10 +41,16 @@ uv run pytest tests/ --cov=. --cov-report=term-missing -q
   uv pip install -e .
   ```
 
+
 ## Configuration
+
+
 Validators and fixers are currently configured via external YAML files loaded by `vadocs.config.load_config`. Future versions will support `pyproject.toml` configuration.
 
+
 ## Roadmap
+
+
 Following the successful v0.1.0 Proof of Concept, the planned evolution is:
 - **v0.2.0:** CLI interface and `pyproject.toml` `[tool.vadocs]` config loading.
 - **v0.3.0:** Index sync validation (ensuring ADR indexes match file headers).
