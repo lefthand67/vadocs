@@ -1,3 +1,10 @@
+---
+owner: rudakow.wadim@gmail.com
+version: 0.1.0
+birth: 2026-02-07
+date: 2026-02-07
+---
+
 # Development Workflow
 
 
