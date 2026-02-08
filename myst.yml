@@ -6,7 +6,7 @@ project:
   # description:
   # keywords: []
   # authors: []
-  github: https://github.com/lefthand67/vadocs
+  github: https://github.com/soviar-systems/vadocs
   # To autogenerate a Table of Contents, run "myst init --write-toc"
 site:
   template: book-theme

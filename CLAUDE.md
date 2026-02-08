@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-vadocs is a validation engine for Documentation-as-Code workflows. It validates structure, enforces consistency, and auto-fixes common issues in documentation (particularly ADRs). This is a spoke project of the [AI Engineering Book](https://github.com/lefthand67/ai_engineering_book) — the parent project's ADRs in `architecture/adr/` are the primary target documents for vadocs validators.
+vadocs is a validation engine for Documentation-as-Code workflows. It validates structure, enforces consistency, and auto-fixes common issues in documentation (particularly ADRs). This is a spoke project of the [AI Engineering Book](https://github.com/soviar-systems/ai_engineering_book) — the parent project's ADRs in `architecture/adr/` are the primary target documents for vadocs validators.
 
 Currently v0.1.0 — library-only, no CLI. v0.2.0 will add CLI subcommands and plugin discovery via entry points.
 
@@ -67,7 +67,7 @@ src/vadocs/
 
 ## Conventions
 
-- **Save plans to `misc/plan/plan_<date_hash>.md`** before starting implementation. This preserves decision history across context switches.
+- **Save plans to `misc/plan/plan_<YYYYMMDD>_<descriptive_slug>.md`** before starting implementation. This preserves decision history across context switches.
 - Use `uv run` for tests/scripts, `uv add` for dependencies — never raw pip.
 - When editing `.md` files: these are MyST Markdown notebooks paired with Jupytext. Never convert `` ```{code-cell} `` blocks to standard fenced code blocks. Preserve MyST directive syntax exactly.
 - Prefer `pathlib.Path` — never use `os` for path operations.
