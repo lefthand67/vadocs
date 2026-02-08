@@ -22,9 +22,6 @@ dependencies = [
     "pyyaml>=6.0",
 ]
 
-[project.optional-dependencies]
-dev = ["pytest>=9.0.2", "pytest-cov>=7.0.0"]
-
 # NO entry points - direct imports only in v0.1.0
 # NO CLI script - library only in v0.1.0
 
@@ -38,6 +35,9 @@ packages = ["src/vadocs"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[dependency-groups]
+dev = ["pytest>=9.0.2", "pytest-cov>=7.0.0"]
 
 [tool.jupytext]
 formats = "ipynb,md:myst"
